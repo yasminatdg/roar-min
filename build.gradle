@@ -31,8 +31,9 @@ subprojects {
 	
 	
 
-	configurations.compile.transitive = true  // Make sure transitive project dependencies are resolved.
-
+	configurations.all {
+    	transitive = true
+	}
 
 	// set backwards compatibililty with 1.7 so we can use in things like tomcat 7
 
