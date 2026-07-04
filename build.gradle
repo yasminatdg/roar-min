@@ -193,7 +193,7 @@ project(':dataaccess') {
 // individual subproject 
 project(':api') {
 	dependencies {
-		compile project(':dataaccess')
+		 implementation project(':dataaccess')
 		 testCompile project (path: ":dataaccess", configuration: 'testArtifacts')
 		 testCompile 'com.mockrunner:mockrunner-jdbc:1.1.1'
 	}
