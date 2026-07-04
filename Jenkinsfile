@@ -3,7 +3,7 @@ pipeline {
     environment {
         STAGE_VERSION = "0.0.${BUILD_NUMBER}"
         RC_VERSION = "1.0.${BUILD_NUMBER}"
-        JAVA_HOME = "/usr/lib/jvm/java-11-openjdk"
+        JAVA_HOME = "/opt/java/openjdk"
     }
     stages {
         stage('Source') {
@@ -15,7 +15,11 @@ pipeline {
         }
         stage('Compile') {
             steps {
-                sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk && export PATH=$JAVA_HOME/bin:$PATH && gradle -PSTAGE_VERSION=$STAGE_VERSION clean compileJava assemble'
+                sh '''
+                export JAVA_HOME=/opt/java/openjdk
+                export PATH=$JAVA_HOME/bin:$PATH
+                gradle -PSTAGE_VERSION=$STAGE_VERSION clean compileJava assemble
+                '''                
                 stash includes: '**/web*.war', name: 'roar'
             }
         }
