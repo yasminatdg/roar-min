@@ -143,18 +143,7 @@ project(':dataaccess') {
         implementation project(':util')
     }
 
-    configurations {
-        testArtifacts.extendsFrom testRuntimeOnly
-    }
-
-    task testJar(type: Jar) {
-        archiveClassifier.set('test')
-        from sourceSets.test.output
-    }
-
-    artifacts {
-        testArtifacts testJar
-    }
+    
 }
 
 
