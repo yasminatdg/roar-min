@@ -18,8 +18,8 @@ pipeline {
                 sh '''
                 export JAVA_HOME=/opt/java/openjdk
                 export PATH=$JAVA_HOME/bin:$PATH
-                gradle -PSTAGE_VERSION=$STAGE_VERSION clean compileJava assemble
-                '''                
+                gradle -Dorg.gradle.java.home=/opt/java/openjdk -PSTAGE_VERSION=$STAGE_VERSION clean compileJava assemble
+                '''              
                 stash includes: '**/web*.war', name: 'roar'
             }
         }
