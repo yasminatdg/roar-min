@@ -72,7 +72,7 @@ subprojects {
     }
 
     dependencies {
-        
+        implementation project(':util')
         implementation 'mysql:mysql-connector-java:5.1.38'
         implementation "javax.ws.rs:jsr311-api:1.1.1"
         implementation 'com.sun.jersey:jersey-server:1.19'
