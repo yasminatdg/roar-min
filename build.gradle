@@ -90,19 +90,19 @@ subprojects {
 	}
 	
 	dependencies {
-		compile 'mysql:mysql-connector-java:5.1.38'
-		compile "javax.ws.rs:jsr311-api:1.1.1" 
-		compile 'com.sun.jersey:jersey-server:1.19' 
-		compile 'com.sun.jersey:jersey-core:1.19' 
-	 	compile 'com.sun.jersey:jersey-client:1.19' 
-		compile 'com.sun.jersey:jersey-servlet:1.19' 
-		compile 'com.sun.jersey:jersey-json:1.19' 
-		compile 'com.fasterxml.jackson.core:jackson-core:2.6.3'
-		compile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
-		compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.3'
-		compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.6.3'
-		compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.6.3'
-		compile 'org.owasp.esapi:esapi:2.0.1'
+		implementation 'mysql:mysql-connector-java:5.1.38'
+		implementation "javax.ws.rs:jsr311-api:1.1.1" 
+		implementation 'com.sun.jersey:jersey-server:1.19' 
+		implementation 'com.sun.jersey:jersey-core:1.19' 
+	 	implementation 'com.sun.jersey:jersey-client:1.19' 
+		implementation 'com.sun.jersey:jersey-servlet:1.19' 
+		implementation 'com.sun.jersey:jersey-json:1.19' 
+		implementation 'com.fasterxml.jackson.core:jackson-core:2.6.3'
+		implementation 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
+		implementation 'com.fasterxml.jackson.core:jackson-annotations:2.6.3'
+		implementation 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.6.3'
+		implementation 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.6.3'
+		implementation 'org.owasp.esapi:esapi:2.0.1'
 	}
 		
 	dependencies {
