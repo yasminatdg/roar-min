@@ -218,7 +218,7 @@ project(':web') {
 
 
     dependencies {
-	compile project(':api')
+	implementation project(':api')
         testCompile'commons-io:commons-io:2.5'
 	testCompile 'junit:junit:4.11'
     }
