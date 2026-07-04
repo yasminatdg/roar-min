@@ -37,8 +37,9 @@ subprojects {
 
 	// set backwards compatibililty with 1.7 so we can use in things like tomcat 7
 
-	tasks.withType(JavaCompile) { sourceCompatibility = "1.7"; targetCompatibility = "1.7" } 
-
+	tasks.withType(JavaCompile) {
+    	options.release = 8
+	}
 	
 	 // if we think we're not running in Jenkins, then allow the mavenCentral repo to be used
 	 //  this allows us to run this outside of Jenkins
