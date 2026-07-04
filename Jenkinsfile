@@ -4,6 +4,7 @@ pipeline {
         STAGE_VERSION = "0.0.${BUILD_NUMBER}"
         RC_VERSION = "1.0.${BUILD_NUMBER}"
         JAVA_HOME = "/opt/java/openjdk"
+        PATH = "/opt/gradle-7.6/bin:${env.PATH}"
     }
     stages {
         stage('Source') {
