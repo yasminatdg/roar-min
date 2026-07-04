@@ -236,8 +236,7 @@ project(':web') {
     }
  
     // only needed here because we have to force pom creation to work with Artifactory
-    apply plugin: 'maven'
-
+    apply plugin: 'maven-publish'
     task createPom {
                 doLast { 
 	 		pom { 
